@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: mini-lotto
+    runtime: docker
+    plan: free
+    healthCheckPath: /health.php
+    envVars:
+      - key: PORT
+        value: "80"
+      - key: DRAW_AT
+        value: "2026-11-24T22:00:00-03:00"
